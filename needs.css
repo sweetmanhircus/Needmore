@@ -1,0 +1,154 @@
+/* Basic styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    text-align: center;
+}
+
+/* Gallery container */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+/* Card style */
+.card {
+    width: 250px;
+    height: 250px;
+    margin: 15px;
+    background-color: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Text under the image */
+.card .text {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    right: 0;
+    padding: 7px;
+    background-color: rgba(255, 0, 0, 0.5);
+    color: white;
+    font-size: 18px;
+    text-align: center;
+    margin: 0;
+    transition: opacity 0.3s;
+    height: 30px;
+    
+    
+}
+
+/* Hover effect */
+.card:hover {
+    transform: scale(1.24);
+}
+
+/* Checkbox style */
+.checkbox {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 2;
+}
+
+/* Checked state */
+.checkbox.checked {
+    background-color: rgba(13, 255, 0, 0.8);
+}
+
+
+/*extras*/
+
+
+.card{
+    position: relative;
+    width: 200px;
+    display: inline-block;
+    transition: 0.8s; 
+    border: 3px solid #131228;
+      background-color: #fafafa; 
+      
+  
+  border-radius: 12px !important;
+  
+    
+    margin: 25px 0 25px 25px;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    text-align: center;
+    line-height: 50px;
+    font-size: 12px;
+    font-family: sans-serif;
+  }
+  
+  /**.icon:nth-child(1) { background: cornflowerblue; }
+  .icon:nth-child(2) { background: salmon; }
+  .icon:nth-child(3) { background: gray; } */
+  
+  /**
+   * The "shine" element
+   */
+  
+  .card:after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+     transform: rotate(30deg);
+    background: rgba(255, 255, 255, 0.0);
+    background: linear-gradient(
+      to right, 
+      rgba(255, 255, 255, 0.0) 0%,
+      rgba(255, 255, 255, 0.0) 70%,
+      rgba(255, 255, 255, 0.14) 74%,
+      rgba(255, 255, 255, 0.1) 76%,
+      rgba(255, 255, 255, 0.0) 77%,
+      rgba(255, 255, 255, 0.06) 79%,
+      rgba(255, 255, 255, 0.3) 92%,
+      rgba(255, 255, 255, 0.0) 100%
+    );
+  }
+  
+  /* Hover state - trigger effect */
+  
+  .card:hover:after {
+    opacity: 1;
+    top: -30%;
+    left: -30%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.7s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+  }
+  
+  /* Active state */
+  
+  .card:active:after {
+    opacity: 0;
+  }
+  .card:hover { 
+      -webkit-box-shadow: 0px 2px 9px 2px rgba(17,98,238,0.53);
+  -moz-box-shadow: 0px 2px 9px 2px rgba(17,98,238,0.53);
+  box-shadow: 0px 2px 9px 2px rgba(17,98,238,0.53); 
+  border: 3px solid #292945 !important; } 

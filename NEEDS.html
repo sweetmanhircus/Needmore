@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stylish Image Gallery</title>
+    <link rel="stylesheet" href="needs.css">
+</head>
+<body>
+    <h1>MY STYLISH IMAGE GALLERY</h1>
+    <div class="gallery">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71hebsrwnkL._SY450_.jpg" alt="Image 1">
+            <div id="chok" class="checkbox"></div>
+            <h1 id="toxt" class="text">Headphone</h1>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/51TBnOSuaBL._SX466_.jpg" alt="Image 2">
+            <div id="chok" class="checkbox"></div>
+            <h1 id="toxt" class="text">Smartphone</h1>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://imgs.search.brave.com/itxQIu9uJdDKg_QWGOQC7OErnU8PNafoG74ldHjE-jE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly91cy5u/b3RoaW5nLnRlY2gv/Y2RuL3Nob3AvZmls/ZXMvMjA0OHgxMzUy/QnV5UGFnZS1CbGFj/a1Bob25lLTEucG5n/P3Y9MTcyMDA5Mjg5/Mg" alt="Image 3">
+            <div id="chok" class="checkbox"></div>
+            <h1 id="toxt" class="text">Bluetooth Speaker</h1>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="https://imgs.search.brave.com/jYAmJOtK3d5rPHZJkfwUrchiuC5wNR405kbsUlDInwM/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9wdXJz/dWVwZXJmb3JtYW5j/ZS5jb20vd3AtY29u/dGVudC91cGxvYWRz/LzIwMjQvMDIvaW1h/Z2UtMTIucG5n" alt="Image 4">
+            <div id="chok" class="checkbox"></div>
+            <h1 id="toxt" class="text">Camera</h1>
+        </div>
+    </div>
+
+    <div class="gallery">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="https://imgs.search.brave.com/w5-KUoIpRYCR3yQNhtFhsUqWUkUiTF-PXuDCHR_aVLE/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWFn/ZS5wZXRtZC5jb20v/ZmlsZXMvc3R5bGVz/Lzk3OHg1NTAvcHVi/bGljLzIwMjItMTAv/QXVzdHJhbGlhbi1T/aGVwaGVyZC5qcGVn/P3c9MjA0OCZxPTc1" alt="Image 1">
+            <div id="chok" class="checkbox"></div>
+            <h1 id="toxt" class="text">Headphone</h1>
+        </div>
+        <!-- Card 2 -->
+        <div class="card">
+            <img src="https://m.media-amazon.com/images/I/71WvBLJvqGL._AC_SX466_.jpg" alt="Image 2">
+            <div id="chok" class="checkbox"></div>
+            <h1 id="toxt" class="text">Smartphone</h1>
+        </div>
+        <!-- Card 3 -->
+        <div class="card">
+            <img src="https://imgs.search.brave.com/_b8yXuLvO9Q53SSwaC4uVU1qDqzyL8G0lDdkGfeEEc0/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pLnBp/bmltZy5jb20vb3Jp/Z2luYWxzLzFlLzVk/LzNkLzFlNWQzZGUz/MDEzZmYxZDUyZDU1/NjJhZTVlNDI0Yjg4/LmpwZw" alt="Image 3">
+            <div id="chok" class="checkbox"></div>
+            <h1 id="toxt" class="text">Bluetooth Speaker</h1>
+        </div>
+        <!-- Card 4 -->
+        <div class="card">
+            <img src="HIRCUSXflameladder..png" alt="Image 4">
+            <div id="chok" class="checkbox"></div>
+            <h1 id="toxt" class="text">Camera</h1>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to handle the checkbox click and card animation
+        const checkboxes = document.querySelectorAll('.checkbox');
+
+        checkboxes.forEach((checkbox) => {
+            checkbox.addEventListener('click', () => {
+                const card = checkbox.parentElement;
+
+                // Toggle checked class
+                checkbox.classList.toggle('checked');
+                card.classList.toggle('checked');
+            });
+        });
+
+        
+               // JavaScript to handle checkbox click and change text background color
+              
+
+checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener('click', () => {
+        const card = checkbox.parentElement; // The card containing the checkbox
+        const text = card.querySelector('.text'); // The text element (h1)
+
+        // Toggle the background color of the text when checkbox is clicked
+        text.style.backgroundColor = text.style.backgroundColor === 'green' ? '' : 'green'; // Change to desired color
+    });
+});
+    </script>
+</body>
+</html>
